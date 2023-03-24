@@ -3,14 +3,16 @@ package project.backend.domain;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonView;
 import jakarta.persistence.*;
+import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
 
 //import javax.persistence.*;
 import java.time.LocalDateTime;
 
+@Data
 @Entity
-@Table
+@Table(name = "Massage")
 @ToString(of = {"id", "text"})
 @EqualsAndHashCode(of = {"id"})
 public class Message {
